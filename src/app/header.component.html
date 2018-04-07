@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+    <a class="navbar-brand" href="#">GitHub</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="input-group header-search">
+        <div class="input-group-prepend">
+          <span class="input-group-text">{{this.username}}</span>
+        </div>
+        <input #searchKey type="text" class="form-control" placeholder="Search User Name" value="" (keyup)="searchProfile(searchKey.value)">
+      </div>
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link float-right" href="#">Twitter</a>
+        <a class="nav-item nav-link float-right" href="#">Github</a>
+      </div>
+    </div>
+</nav>
