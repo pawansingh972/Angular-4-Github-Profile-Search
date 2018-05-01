@@ -1,5 +1,21 @@
 <div class="container px-3 mt-4">
-    <div class="row">
+
+    <div class="user-notfound"  *ngIf="githubUser.user == false && (githubUser.userName && githubUser.userName.length > 0)">
+        <div class="">
+            <h5>User Profile not found.</h5>
+            <p class="">Please enter a different <b>username</b>.</p>
+        </div>
+    </div>
+
+    <div class="empty-username"  *ngIf="(githubUser.userName.length == 0)">
+        <div class="">
+            <h5>Search any GitHub user</h5>
+            <p class="">Please enter a <b>username</b>.</p>
+        </div>
+    
+    </div>
+
+    <div class="row" *ngIf="githubUser && githubUser.user && (githubUser.userName && githubUser.userName.length > 0)">
       <div class="col-3 float-left pr-3">
         <div class="userProfile">
           <a href="{{githubUser.user.html_url}}" target="_blank" class="vcard-avatar d-block">

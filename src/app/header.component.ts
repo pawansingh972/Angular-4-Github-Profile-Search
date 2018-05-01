@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   searchUser() {
+    // this.githubUser.userName = this.githubUser.userName.trim() || 'pawansingh972';
     if (this.githubUser.userName && this.githubUser.userName.length > 0) {
       this._githubService.updateUser(this.githubUser.userName);
       this.getUserInformation();
@@ -47,10 +48,8 @@ export class HeaderComponent implements OnInit {
         () => console.log('Done')
       );
 
-
-
       this._githubService.getRepos().subscribe(repos => {
-        // console.log(repos);
+        console.log(repos);
         this.githubUser.repos = repos;
       },
         (err) => {

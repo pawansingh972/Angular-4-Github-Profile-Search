@@ -73,9 +73,21 @@
       } 
     }
   }
-.text-small {
+
+
+
+
+  .text-small {
   font-size: 12px !important;
 }
+
+.empty-username,
+.user-notfound {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+}
+
 .f12 {
   font-size: 12px !important;
 }

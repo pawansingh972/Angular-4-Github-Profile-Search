@@ -6,6 +6,13 @@
     .form-control, .input-group-text {
         font-size: 13px;
     }
+    .input-group-prepend {
+        .input-group-text {
+            background-color: rgba(255, 255, 255, 0.125);
+            border: none;
+            color: #fff;        
+        }
+    }
     input {
         background-color: rgba(255,255,255,0.125);
         border: none;
