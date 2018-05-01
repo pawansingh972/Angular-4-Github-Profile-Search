@@ -9,13 +9,9 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class GithubService {
     private userName: string;
-    // private clientId: string;
-    // private clientSecret: string;
     private clientId = '60b9f23dedffbdfc476c';
     private clientSecret = 'd1c186c6373f96571c0bfcf76b84e4dc6fd0c15a';
 
-    // private clientId = '4e62cc0bafb2127affd9';
-    // private clientSecret = 'b35765d8beabdcb0fd9903d2ef83911c9530819f';
     constructor(private _http: Http) {
         console.log('Github sservice is ready');
         this.userName = '';
@@ -25,7 +21,7 @@ export class GithubService {
         if (this.userName) {
             return this._http.get('https://api.github.com/users/' + this.userName
             + '?client_id=' + this.clientId
-            + '?client_id=' + this.clientSecret)
+            + '&client_secret=' + this.clientSecret)
             .map(res => res.json())
             .catch(this.handleError);
         }
