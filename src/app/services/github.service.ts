@@ -23,7 +23,7 @@ export class GithubService {
 
     getUser() {
         if (this.userName) {
-            return this._http.get('http://api.github.com/users/' + this.userName
+            return this._http.get('https://api.github.com/users/' + this.userName
             + '?client_id=' + this.clientId
             + '?client_id=' + this.clientSecret)
             .map(res => res.json())
@@ -33,7 +33,7 @@ export class GithubService {
 
     getRepos() {
         if (this.userName) {
-            return this._http.get('http://api.github.com/users/' + this.userName
+            return this._http.get('https://api.github.com/users/' + this.userName
                 + '/repos?client_id=' + this.clientId
                 + '&client_secret=' + this.clientSecret)
                 .map(res => res.json())
